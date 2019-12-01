@@ -1,0 +1,1368 @@
+/* ==========================================
+========= [ Table of Content CSS ] ==========
+=============================================
+1. Core CSS
+    1.1 Roboto Condensed Google Fonts
+2. Theme CSS
+    2.1 Site Preloader
+3. Header CSS
+    3.1 Site Logo
+    3.2 Navigation Menu
+    3.3 Slicknav menu
+4. Hero CSS
+    4.1 Hero Social Icons
+    4.2Hero Button
+    4.3Hero scroll down button
+5. About Section CSS
+6. Skillset CSS
+    6.1 Progress bar
+    6.2 Progress-Bar languages width
+    6.3 Progress-Bar Design width
+    6.4 Progress-Bar framework width
+    6.5 Progress-Bar CMS width
+7. Services CSS
+8. Resume CSS
+9. Portfolio CSS
+10. Testimonial CSS
+11. Blog CSS
+12. Contact CSS
+    12.1 Contact form
+    12.2 Contact details
+13. Footer CSS
+14. Theme Common CSS
+    14.1 Section title
+    14.2 Box-shadow dark version
+    14.3 Box-shadow light version
+    14.4 Background-color dark version
+    14.5 Background-color light version
+    14.6 Theme left-right design
+    14.7 Hover-background-color dark version
+    14.8 Hover-background-color light version
+    14.9 Transition
+    14.10 Transform-45-deg
+15. Light Theme CSS
+    15.1 Light body color and bg-color
+    15.2 Light header shadow
+    15.3 Light border black
+    15.4 Light background color white
+    15.5 Light color black
+    15.6 Light background color transparent
+    15.7 Light background color black
+    15.8 Light background color deep-gray
+    15.9 Light border color deep-gray
+    15.10 Light client shadow
+    15.11 Light color gray
+    15.12 Light color white
+    15.13 Light background color gray
+    15.14 Light footer shadow
+=============================================
+========= [ Table of Content CSS ] ==========
+=============================================*/
+/*====================
+    [ Core CSS ]
+======================*/
+/* ====== Roboto Condensed Google Fonts ====== */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+html,
+body {
+    height: 100%;
+}
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+    color: #fff;
+    background-color: #2e2e2e;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+a,
+a:focus,
+a:active,
+a:checked,
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+section {
+    width: 100%;
+    padding: 80px 0;
+}
+/*====================================
+        [ Theme CSS ]
+======================================*/
+/* ====== Site Preloader ====== */
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+.frive_preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: #2e2e2e;
+}
+.spinner {
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+/*===========================================
+             [ Header CSS ] 
+============================================= */
+header {
+    background: #2E2E2E;
+    padding: 12px 0;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+}
+/* ====== Site Logo ====== */
+.logo {
+    position: relative;
+}
+.logo img {
+    width: 100px;
+    height: 50px;
+    border: 3px solid #fff;
+    padding: 7px;
+}
+.logo:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #2e2e2e;
+}
+.logo:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #2e2e2e;
+}
+/* ====== Navigation Menu ====== */
+header nav ul {
+    margin-top: 5px;
+}
+header nav ul li {
+    display: inline-block;
+    margin: 0 2px;
+}
+header nav ul li a {
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    color: #fff;
+}
+header nav ul li a:after {
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+header nav ul li:last-child {
+    margin-right: 0;
+}
+header nav ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+header nav ul li a:hover {
+    color: #ddd;
+}
+header nav ul li a.active_nav_menu:after {
+    background-color: transparent;
+}
+header nav ul li a.active_nav_menu {
+    border-bottom: 1px solid #ddd;
+    color: #ddd;
+}
+/* ====== Slicknav menu ====== */
+.slicknav_menu {
+    position: fixed;
+    right: 30px;
+    top: 10px;
+    background: transparent;
+    z-index: 99;
+    display: none;
+}
+.slicknav_nav {
+    width: 200px;
+    padding: 15px;
+}
+.slicknav_nav a {
+    text-transform: uppercase;
+    outline: 0;
+    border-bottom: 1px solid transparent;
+}
+.slicknav_nav a:hover {
+    border-radius: 0px;
+    background: transparent;
+    color: #aaa;
+    border-bottom: 1px solid #fff;
+}
+.slicknav_menu .slicknav_menutxt {
+    display: none;
+}
+.slicknav_btn {
+    text-shadow: none;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+.slicknav_menu .slicknav_icon {
+    float: none;
+    margin: 0;
+}
+.slicknav_menu .slicknav_icon-bar {
+    width: 30px;
+    box-shadow: none;
+}
+/*===========================================
+             [ Hero CSS ] 
+============================================= */
+body section.hero_area div {
+    width: 100%;
+    height: 100%;
+}
+section.hero_area {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+}
+section.hero_area:before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: 0px;
+    width: 56%;
+    height: 100%;
+    background-color: #2e2e2e;
+    opacity: .5;
+    -webkit-transform: skewX(25deg);
+    -moz-transform: skewX(25deg);
+    -ms-transform: skewX(25deg);
+    -o-transform: skewX(25deg);
+    transform: skewX(25deg);
+}
+.hero_area .hero_table {
+    display: table;
+}
+.hero_text,
+.hero_img {
+    display: table-cell;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+.hero_text h1 {
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 65px;
+}
+.hero_text h3 {
+    font-size: 40px;
+    margin: 25px 0;
+    text-transform: none;
+}
+.hero_text h3:first-letter {
+    text-transform: uppercase;
+}
+.hero_text span.type {
+    font-weight: 900;
+}
+/* ====== Hero Social Icons ====== */
+ul.social li {
+    display: inline-block;
+    margin: 0 3px;
+}
+ul.social li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 18px;
+}
+ul.social li:first-child {
+    margin-left: 0;
+}
+ul.social li a:hover {
+    border-radius: 5px;
+}
+ul.social i {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+ul.social li a.facebook:hover {
+    background-color: #4267B2;
+    border-color: #4267B2
+}
+ul.social li a.instagram:hover {
+    background-color: #99389B;
+    border-color: #99389B
+}
+ul.social li a.twitter:hover {
+    background-color: #1DA1F2;
+    border-color: #1DA1F2
+}
+ul.social li a.youtube:hover {
+    background-color: #FF0202;
+    border-color: #FF0202
+}
+ul.social li a.linkedin:hover {
+    background-color: #0077B5;
+    border-color: #0077B5
+}
+/* ====== Hero Button ====== */
+.hero_text a.hire_btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 7px 40px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #fff;
+    border-radius: 3px;
+    border: 2px solid #fff;
+}
+/* ====== Hero scroll down button ====== */
+a.scroll_down_btn {
+    position: relative;
+    display: block;
+}
+a.scroll_down_btn span {
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    width: 30px;
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    margin: 0 auto;
+    display: block;
+}
+a.scroll_down_btn:after {
+    position: absolute;
+    content: "";
+    left: 62px;
+    top: 160px;
+    width: 5px;
+    height: 7px;
+    background-color: #fff;
+    animation: scroll_down 1.5s infinite;
+}
+@keyframes scroll_down {
+    0% {
+        top: 160px;
+    }
+    100% {
+        top: 190px;
+        opacity: 0;
+    }
+}
+/*===========================================
+             [ About CSS ] 
+============================================= */
+section.about_area {
+    padding-bottom: 100px;
+    position: relative;
+}
+.about_area .rotate {
+    -webkit-transform: skewX(15deg);
+    -moz-transform: skewX(15deg);
+    -ms-transform: skewX(15deg);
+    -o-transform: skewX(15deg);
+    transform: skewX(15deg);
+    overflow: hidden;
+    padding: 0;
+}
+.about_area .about_rotate_img {
+    background-color: transparent;
+}
+.about_text {
+    -webkit-transform: skewX(-15deg);
+    -moz-transform: skewX(-15deg);
+    -ms-transform: skewX(-15deg);
+    -o-transform: skewX(-15deg);
+    transform: skewX(-15deg);
+}
+.about_text {
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    padding: 30px 30px 10px 60px;
+    '
+
+}
+.about_text span {
+    display: block;
+}
+.about_text h2 {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.about_text p {
+    margin-bottom: 10px;
+}
+.about_image img {
+    float: right;
+    padding-left: 45px;
+}
+/*===========================================
+             [ My Skill CSS ] 
+============================================= */
+section.skills_area {
+    position: relative;
+}
+/* ====== Progress bar ====== */
+.my_skills {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+.my_skills h2 {
+    margin-bottom: 20px;
+}
+.progress-title {
+    font-size: 16px;
+    margin: 0 0 5px;
+}
+.progress {
+    height: 10px;
+    background: #000;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 30px;
+    overflow: visible;
+}
+.progress .progress-bar {
+    box-shadow: none;
+    position: relative;
+    -webkit-animation: animate-positive 2s;
+    -moz-animation: animate-positive 2s;
+    -ms-animation: animate-positive 2s;
+    -o-animation: animate-positive 2s;
+    animation: animate-positive 2s;
+    background-color: #fff;
+}
+/* ====== Progress-Bar languages width ====== */
+#html {
+    width: 95%;
+}
+#css {
+    width: 90%;
+}
+#sass {
+    width: 70%;
+}
+#javascript {
+    width: 40%;
+}
+#jquery {
+    width: 50%;
+}
+#php {
+    width: 40%;
+}
+#mysql {
+    width: 55%;
+}
+/* ====== Progress-Bar design width ====== */
+#photoshop {
+    width: 45%;
+}
+#illustrator {
+    width: 40%;
+}
+/* ====== Progress-Bar framework width ====== */
+#bootstrap {
+    width: 95%;
+}
+#foundation {
+    width: 80%;
+}
+#uikit {
+    width: 75%;
+}
+#responsive {
+    width: 100%;
+}
+/* ====== Progress-Bar CMS width ====== */
+#wp_td {
+    width: 40%;
+}
+#wp_tc {
+    width: 99%;
+}
+.progress .progress-bar:after {
+    content: "";
+    display: block;
+    border: 15px solid transparent;
+    border-bottom: 21px solid transparent;
+    position: absolute;
+    top: -26px;
+    right: -12px;
+}
+.progress .progress-value {
+    font-size: 15px;
+    position: absolute;
+    top: -32px;
+    right: -12px;
+}
+.progress .progress-bar:after {
+    border-bottom-color: #fff;
+}
+@-webkit-keyframes animate-positive {
+    0% {
+        width: 0;
+    }
+}
+@keyframes animate-positive {
+    0% {
+        width: 0;
+    }
+}
+/*===========================================
+             [ Service CSS ] 
+============================================= */
+section.services_area {
+    position: relative;
+    padding-bottom: 100px;
+}
+.services_area .table {
+    display: table;
+    width: 100%;
+    min-height: 250px;
+    margin-top: 50px;
+}
+.single_service {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    position: relative;
+}
+.single_service i {
+    position: absolute;
+    left: 28px;
+    top: -35px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #fff;
+    border-radius: 35px 35px 5px 5px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px;
+}
+.single_service h3 {
+    margin: 25px 0 10px;
+    text-transform: capitalize;
+}
+/*===========================================
+             [ Resume CSS ] 
+============================================= */
+section.resume_area {
+    position: relative;
+}
+.single_resume {
+    display: table;
+    width: 100%;
+    min-height: 250px;
+    margin-bottom: 40px;
+}
+.resume_content {
+    display: table-cell;
+    vertical-align: middle;
+    border: 2px dotted #fff;
+    padding: 20px;
+    margin-left: 60px;
+    display: block;
+    position: relative;
+}
+.resume_content.text-right {
+    margin: 0;
+    margin-right: 60px;
+}
+.resume_content span.resume_year,
+.resume_content span.resume_year_right {
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 70px;
+    border: 2px dotted #fff;
+    border-radius: 50px 50px 0;
+    text-align: center;
+}
+.resume_content span.resume_year_right {
+    border-radius: 0 50px 50px;
+}
+.resume_content span.resume_year {
+    position: absolute;
+    bottom: -3px;
+    left: -70px;
+}
+.resume_content span.resume_year_right {
+    position: absolute;
+    top: 0;
+    right: -70px;
+}
+.resume_content span.resume_date {
+    display: inline-block;
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+/*===========================================
+             [ Portfolio CSS ] 
+============================================= */
+section.portfolio_area {
+    position: relative;
+}
+.single_portfolio {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.single_portfolio:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+}
+.single_portfolio:hover:after {
+    opacity: .5;
+    visibility: visible;
+    bottom: 0;
+}
+.single_portfolio img {
+    max-width: 100%;
+}
+.single_portfolio i.fa-link,
+.single_portfolio i.fa-eye {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    font-size: 30px;
+    margin-top: -15px;
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 7px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+.single_portfolio i.fa-link {
+    left: -100%;
+    margin-left: -16px;
+}
+.single_portfolio i.fa-eye {
+    right: -100%;
+    margin-right: -16px;
+}
+.single_portfolio:hover i.fa-link,
+.single_portfolio:hover i.fa-eye {
+    opacity: 1;
+    visibility: visible;
+}
+.single_portfolio:hover i.fa-link {
+    left: 40%;
+}
+.single_portfolio i.fa-link:hover,
+.single_portfolio i.fa-eye:hover {
+    color: #aaa;
+}
+.single_portfolio:hover i.fa-eye {
+    right: 40%;
+}
+.portfolio_menu {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.portfolio_menu button {
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+    outline: 0;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px 10px;
+    border-top: 2px dotted #fff;
+    padding: 5px;
+}
+.portfolio_menu button:after {
+    position: absolute;
+    content: "";
+    left: -10px;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    border-right: 2px dotted #fff;
+    transform: rotate(15deg);
+}
+.portfolio_menu button.active_portfolio_btn {
+    color: #aaa;
+    border-color: #aaa;
+}
+.portfolio_menu button.active_portfolio_btn:after {
+    border-color: #aaa;
+}
+/*===========================================
+             [ Testimonial CSS ] 
+============================================= */
+section.testimonial_area {
+    position: relative;
+    padding-bottom: 110px;
+}
+.single_client {
+    width: 100%;
+    min-height: 300px;
+    padding: 25px;
+    border-radius: 5px;
+}
+.owl-carousel .owl-item img {
+    width: 200px;
+    height: 250px;
+    float: left;
+    margin-right: 30px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+.client_speech h3 {
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+.client_speech span {
+    color: #ddd;
+    margin: 7px 0;
+    display: inline-block;
+    font-size: 20px;
+}
+.client_speech p {
+    margin-bottom: 10px;
+}
+.client_speech ul.social {
+    margin-top: 20px;
+}
+.owl-dots {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    right: -34%;
+    top: 0;
+    margin-left: -150px;
+}
+.owl-dots button.owl-dot {
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background: transparent;
+    margin-bottom: 7px;
+    outline: 0;
+    display: block;
+}
+/*===========================================
+             [ Blog / News CSS ] 
+============================================= */
+section.blog_area {
+    position: relative;
+}
+.single_blog {
+    width: 100%;
+    min-height: 500px;
+    padding: 20px 20px 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+.single_blog img {
+    width: 100%;
+    height: 220px;
+    border-radius: 5px 5px 0 0;
+}
+.single_blog:after {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 20px;
+    width: 89%;
+    height: 220px;
+    background-color: #000;
+    opacity: 0.5;
+    -webkit-transform: scale(.95);
+    -moz-transform: scale(.95);
+    -ms-transform: scale(.95);
+    -o-transform: scale(.95);
+    transform: scale(.95);
+    border-radius: 5px 5px 0 0;
+}
+.single_blog:hover:after {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.single_blog h3 {
+    margin: 20px 0 10px;
+}
+.single_blog a h3:hover {
+    color: #ddd;
+}
+.single_blog span a {
+    display: inline-block;
+    margin-right: 5px;
+    color: #ddd;
+}
+.single_blog a.date {
+    padding-right: 7px;
+    border-right: 2px solid #ddd;
+}
+.single_blog span a:hover {
+    color: #fff;
+}
+.single_blog p {
+    margin-top: 15px;
+}
+.single_blog a.see_more_btn {
+    display: inline-block;
+    padding: 3px 15px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    ;
+    color: #fff;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+/*===========================================
+             [ Contact CSS ] 
+============================================= */
+section.contact_area {
+    position: relative;
+    padding-bottom: 50px;
+}
+/* ====== Contact form ====== */
+.contact_form {
+    margin-bottom: 50px;
+}
+.contact_form input,
+.contact_form textarea#msg {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    outline: 0;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.contact_form input:focus,
+.contact_form textarea#msg:focus {
+    background-color: transparent;
+}
+.contact_form input::placeholder,
+.contact_form textarea#msg::placeholder {
+    font-style: italic;
+}
+.contact_form input#name {
+    margin-right: 8px;
+}
+.contact_form input#name,
+.contact_form input#email {
+    width: 49%;
+    display: inline-block;
+}
+.contact_form input#subject {
+    width: 100%;
+}
+.contact_form textarea#msg {
+    width: 100%;
+    min-height: 180px;
+    margin-bottom: 0;
+}
+.contact_form input#submit {
+    margin-top: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+}
+/* ====== Contact details ====== */
+section.contact_area {
+    padding-top: 100px 0;
+}
+.contact_details {
+    width: 100%;
+    min-height: 170px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 10px;
+    display: table;
+}
+.contact_details_middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.contact_details_middle i {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+/*===========================================
+             [ Footer CSS ] 
+============================================= */
+footer.footer_area {
+    width: 100%;
+    padding: 30px 0 20px;
+    -webkit-box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.75);
+    -ms-box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.75);
+    -o-box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.75);
+}
+footer.footer_area p {
+    margin-top: 10px;
+}
+footer.footer_area a {
+    border-bottom: 1px solid #fff;
+}
+footer.footer_area a:hover {
+    color: #ddd;
+    border-bottom: 1px solid #ddd;
+}
+footer.footer_area ul.social {
+    margin-bottom: 10px;
+}
+/*===========================================
+             [ Theme Common CSS ] 
+============================================= */
+/* ====== Section title ====== */
+.section_title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.section_title h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 10px 12px;
+    border-bottom: 3px solid #fff;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 2px;
+}
+.section_title h2:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: -10px;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    margin-left: -10px;
+    background-color: #2E2E2E;
+    border-radius: 10px 10px 0;
+}
+.bg_img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* ====== Box-shadow dark version ====== */
+header,
+section.about_area .rotate,
+.my_skills,
+.single_portfolio,
+.single_blog,
+.contact_form input,
+.contact_form textarea#msg,
+.contact_form input#submit,
+.contact_details {
+    -webkit-box-shadow: 0px 5px 15px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 15px -4px rgba(0, 0, 0, 0.75);
+    -ms-box-shadow: 0px 5px 15px -4px rgba(0, 0, 0, 0.75);
+    -o-box-shadow: 0px 5px 15px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 15px -4px rgba(0, 0, 0, 0.75);
+}
+section.about_area,
+section.services_area,
+section.portfolio_area,
+section.blog_area {
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.75);
+    -ms-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.75);
+    -o-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.75);
+}
+.single_service,
+.resume_content {
+    -webkit-box-shadow: 0px 5px 20px 4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 20px 4px rgba(0, 0, 0, 0.75);
+    -ms-box-shadow: 0px 5px 20px 4px rgba(0, 0, 0, 0.75);
+    -o-box-shadow: 0px 5px 20px 4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 20px 4px rgba(0, 0, 0, 0.75);
+}
+/* ====== Box-shadow light version ====== */
+.light header,
+.light section.about_area .rotate,
+.light .my_skills,
+.light .single_portfolio,
+.light .single_blog,
+.light .contact_form input,
+.light .contact_form textarea#msg,
+.light .contact_form input#submit,
+.light .contact_details {
+    -webkit-box-shadow: 0px 5px 15px -4px rgba(136, 132, 132, 0.75);
+    -moz-box-shadow: 0px 5px 15px -4px rgba(136, 132, 132, 0.75);
+    -ms-box-shadow: 0px 5px 15px -4px rgba(136, 132, 132, 0.75);
+    -o-box-shadow: 0px 5px 15px -4px rgba(136, 132, 132, 0.75);
+    box-shadow: 0px 5px 15px -4px rgba(136, 132, 132, 0.75);
+}
+.light section.about_area,
+.light section.services_area,
+.light section.portfolio_area,
+.light section.blog_area {
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(183, 183, 183, 0.75);
+    -moz-box-shadow: 0px 3px 20px 0px rgba(183, 183, 183, 0.75);
+    -ms-box-shadow: 0px 3px 20px 0px rgba(183, 183, 183, 0.75);
+    -o-box-shadow: 0px 3px 20px 0px rgba(183, 183, 183, 0.75);
+    box-shadow: 0px 3px 20px 0px rgba(183, 183, 183, 0.75);
+}
+.light .single_service,
+.light .resume_content {
+    -webkit-box-shadow: 0px 5px 20px 4px rgba(179, 179, 179, 0.75);
+    -moz-box-shadow: 0px 5px 20px 4px rgba(179, 179, 179, 0.75);
+    -ms-box-shadow: 0px 5px 20px 4px rgba(179, 179, 179, 0.75);
+    -o-box-shadow: 0px 5px 20px 4px rgba(179, 179, 179, 0.75);
+    box-shadow: 0px 5px 20px 4px rgba(179, 179, 179, 0.75);
+}
+/* ====== Background-color dark version ====== */
+.about_area .rotate,
+.my_skills,
+.single_service,
+.single_service i,
+.resume_content,
+.resume_content span.resume_year,
+.resume_content span.resume_year_right,
+.single_client,
+.single_blog,
+.contact_form input,
+.contact_form textarea#msg,
+.contact_details,
+.slicknav_nav,
+.slicknav_menu .slicknav_icon-bar {
+    background-color: #3a3a3a;
+}
+/* ====== Background-color light version ====== */
+.light section.hero_area:before,
+.light .about_area .rotate,
+.light .my_skills,
+.light .single_service,
+.light .single_service i,
+.light .resume_content,
+.light .resume_content span.resume_year,
+.light .resume_content span.resume_year_right,
+.light .single_client,
+.light .single_blog,
+.light .contact_form input,
+.light .contact_form textarea#msg,
+.light .contact_details,
+.light .slicknav_nav,
+.light .slicknav_menu .slicknav_icon-bar {
+    background-color: #fff;
+}
+/* ====== Theme left-right design ====== */
+section.about_area:before,
+section.services_area:before,
+section.resume_area:before,
+section.portfolio_area:before,
+section.skills_area:before,
+section.testimonial_area:before,
+section.blog_area:before,
+section.contact_area:before {
+    content: "";
+    position: absolute;
+    right: -150px;
+    top: -5px;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/dots.png);
+    background-color: transparent;
+    transform: rotate(45deg);
+}
+section.about_area:after,
+section.services_area:after,
+section.resume_area:after,
+section.portfolio_area:after,
+section.skills_area:after,
+section.testimonial_area:after,
+section.blog_area:after,
+section.contact_area:after {
+    content: "";
+    position: absolute;
+    left: -150px;
+    bottom: -5px;
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/dots.png);
+    background-color: transparent;
+    transform: rotate(45deg);
+}
+/* ====== Hover-background-color dark version ====== */
+.hero_text a.hire_btn:hover,
+.owl-dots button.owl-dot:hover,
+.owl-dots button.owl-dot.active,
+.single_blog a.see_more_btn:hover,
+.contact_form input#submit:hover {
+    background-color: #fff;
+    color: #000;
+}
+/* ====== Hover-background-color light version ====== */
+.light .hero_text a.hire_btn:hover,
+.light .owl-dots button.owl-dot:hover,
+.light .owl-dots button.owl-dot.active,
+.light .single_blog a.see_more_btn:hover,
+.light .contact_form input#submit:hover {
+    background-color: #000;
+    color: #fff;
+}
+/* ====== Transition ====== */
+header nav ul li a,
+ul.social li a,
+.hero_text a.hire_btn,
+.single_portfolio:after,
+.single_portfolio i.fa-link,
+.single_portfolio i.fa-eye,
+.single_blog:after,
+.contact_form input#submit {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+/* ====== Transform-45-deg ====== */
+ul.social li a,
+.single_portfolio i.fa-link,
+.section_title h2:after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* ==========================================
+             [ Light Theme CSS ] 
+=========================================== */
+/* ====== Light body color and bg-color ====== */
+body.light {
+    color: #000;
+    background-color: #fff;
+}
+/* ====== Light header shadow ====== */
+.light header {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 5px 15px -4px rgba(136, 132, 132, 0.75);
+    -moz-box-shadow: 0px 5px 15px -4px rgba(136, 132, 132, 0.75);
+    -ms-box-shadow: 0px 5px 15px -4px rgba(136, 132, 132, 0.75);
+    -o-box-shadow: 0px 5px 15px -4px rgba(136, 132, 132, 0.75);
+    box-shadow: 0px 5px 15px -4px rgba(136, 132, 132, 0.75);
+}
+/* ====== Light border black ====== */
+.light .logo img,
+.light .active_nav_menu,
+.light a.scroll_down_btn span,
+.light .section_title h2,
+.light .section_title h2:after,
+.light .single_service,
+.light .single_service i,
+.light .resume_content,
+.light .resume_content span.resume_year,
+.light .resume_content span.resume_year_right,
+.light .portfolio_menu button,
+.light .portfolio_menu button:after,
+.light ul.social li a,
+.light .owl-carousel .owl-item img,
+.light .single_blog a.see_more_btn,
+.light .owl-dots button.owl-dot,
+.light .contact_form input,
+.light .contact_form textarea#msg,
+.light footer.footer_area a,
+.light .hero_text a.hire_btn {
+    border-color: #000;
+}
+/* ====== Light background color white ====== */
+.light .logo:before,
+.light .logo:after,
+.light .section_title h2:after,
+.light .single_client,
+.light .owl-dots button.owl-dot {
+    background-color: #fff;
+}
+/* ====== Light color black ====== */
+.light header nav ul li a,
+.light .progress .progress-bar,
+.light .portfolio_menu button,
+.light ul.social li a,
+.light .single_blog h3,
+.light .single_blog span a:hover,
+.light .single_blog a.see_more_btn,
+.light .owl-dots button.owl-dot,
+.light .contact_form input,
+.light .contact_form textarea#msg,
+.light .contact_form input#submit,
+.light footer.footer_area a,
+.light .hero_text a.hire_btn {
+    color: #000;
+}
+/* ====== Light background color transparent ====== */
+.light header nav ul li a.active_nav_menu:after,
+{
+    background-color: transparent;
+}
+/* ====== Light background color black ====== */
+.light header nav ul li a:after,
+.light a.scroll_down_btn:after {
+    background-color: #000;
+}
+/* ====== Light background color deep-gray ====== */
+.light .progress .progress-bar {
+    background-color: #555;
+}
+/* ====== Light border color deep-gray ====== */
+.light .progress .progress-bar:after {
+    border-bottom-color: #555;
+}
+/* ====== Light client shadow ====== */
+.light .single_client {
+    -webkit-box-shadow: inset 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    -ms-box-shadow: inset 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    -o-box-shadow: inset 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+}
+/* ====== Light color gray ====== */
+.light .client_speech span,
+.light .single_blog span a,
+.light .single_blog h3:hover,
+.light footer.footer_area a:hover {
+    color: #aaa;
+}
+/* ====== Light color white ====== */
+.light ul.social li a:hover {
+    color: #fff;
+}
+/* ====== Light background color gray ====== */
+.light .contact_form input:focus,
+.light .contact_form textarea#msg:focus {
+    background-color: #eee;
+}
+/* ====== Light footer shadow ====== */
+.light footer.footer_area {
+    -webkit-box-shadow: 0px -4px 10px 0px rgba(189, 187, 187, 0.75);
+    -moz-box-shadow: 0px -4px 10px 0px rgba(189, 187, 187, 0.75);
+    -ms-box-shadow: 0px -4px 10px 0px rgba(189, 187, 187, 0.75);
+    -o-box-shadow: 0px -4px 10px 0px rgba(189, 187, 187, 0.75);
+    box-shadow: 0px -4px 10px 0px rgba(189, 187, 187, 0.75);
+}
